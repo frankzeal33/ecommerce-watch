@@ -39,7 +39,7 @@ const Wishlist = () => {
         if (res.data && Array.isArray(res.data.items)) {
           setWishlistItems((prevItem) => {
             const newItem = res.data.items.filter(
-              (item) => !prevItem._id === item._id
+              (item) => prevItem._id !== item._id
             );
             return [...prevItem, ...newItem];
           });
