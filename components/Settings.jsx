@@ -52,7 +52,7 @@ const Settings = () => {
     setPassword({ ...password, [e.target.name]: e.target.value });
   };
 
-  const handleCommunicationPrefsChange = (e) => {
+  const handleCommunicationPrefsChange = (key) => {
     setCommunicationPrefs((prev) => {
       const newPref = { ...prev, [key]: !prev[key] };
       setPreferencesChanged(true);
