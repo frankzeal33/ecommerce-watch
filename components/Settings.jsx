@@ -41,14 +41,15 @@ const Settings = () => {
           phone: userData.phone || "",
         });
       };
+
+      fetchUserData();
     } catch (error) {
       console.log(error);
     }
-    fetchUserData();
   }, []);
 
   const handlePasswordChange = (e) => {
-    setPassword({ ...password, [e.target.name]: e.targer.value });
+    setPassword({ ...password, [e.target.name]: e.target.value });
   };
 
   const handleCommunicationPrefsChange = (e) => {
