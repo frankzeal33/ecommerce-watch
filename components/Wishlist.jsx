@@ -56,7 +56,7 @@ const Wishlist = () => {
     fetchWishlist();
   }, [page]);
 
-  const removeFromWishlist = async () => {
+  const removeFromWishlist = async (productId) => {
     try {
       await axios.delete("/api/wishlist", { data: { productId } });
       toast.success("Removed from wishlist");
